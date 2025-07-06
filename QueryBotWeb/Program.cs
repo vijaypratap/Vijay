@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<OpenAiService>();
+builder.Services.AddScoped<SqlService>();
 
 var app = builder.Build();
 

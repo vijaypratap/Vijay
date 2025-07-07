@@ -22,7 +22,7 @@ namespace QueryBotWeb.Controllers
             // For now, treat input as raw SQL for demo purposes (DANGEROUS in production)
             string sql = request.NaturalLanguageQuery;
             string result = _sqlService.ExecuteQuery(sql);
-            return Ok(new { response = result });
+            return Ok(new { response = sql, result });
         }
     }
 }
